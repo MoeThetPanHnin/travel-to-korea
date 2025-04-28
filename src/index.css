@@ -1,0 +1,50 @@
+/* inter font family from Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Tailwind CSS's core styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Tailwind CSS feacture , Custom styles */
+@layer base {
+  :root {
+    --radius: 0.75rem;
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  /* set the default background */
+
+  body {
+    background-color: #fff;
+    color: #18181b; 
+  }
+  
+  
+  /* 
+    Utility class for a slower transition on all properties.
+  */
+
+  .transition-all-slow {
+    transition: all 0.5s ease;
+  }
+  
+  /* Scroll reveal animation classes */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
